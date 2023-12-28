@@ -26,16 +26,19 @@ const Register = () => {
     //     password: password,
     //   })
     // );
-    await axios.post('http://localhost:3001/authentication/sign-up', {
-      fullName: name,
-      username: email,
-      password: password,
-    }, 
-    {
+    await axios.post(
+      "https://mudiem-be.onrender.com/authentication/sign-up",
+      {
+        fullName: name,
+        username: email,
+        password: password,
+      },
+      {
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        }
-    });
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      }
+    );
     navigate("/login");
     setName("");
     setEmail("");

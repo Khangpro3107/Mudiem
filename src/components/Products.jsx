@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { addCart } from "../redux/action";
 import products from "../data/products.json";
@@ -5,7 +6,6 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../utils";
-import { useEffect, useState } from "react";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -18,16 +18,16 @@ const Products = () => {
       filter: "all",
     },
     {
-      text: "Men's clothing",
-      filter: "men's clothing",
+      text: "Beach",
+      filter: "beach",
     },
     {
-      text: "Women's clothing",
-      filter: "women's clothing",
+      text: "Hiking",
+      filter: "hiking",
     },
     {
-      text: "Footwear",
-      filter: "footwear",
+      text: "Cold",
+      filter: "cold",
     },
     {
       text: "Accessories",
@@ -46,14 +46,11 @@ const Products = () => {
     const getProducts = () => {
       setLoading(true);
       if (componentMounted) {
-        // setTimeout(() => {
-        //   setData(products.products);
-        //   setFiltering(products.products);
-        //   setLoading(false);
-        // }, 500);
-        setData(products.products);
-        setFiltering(products.products);
-        setLoading(false);
+        setTimeout(() => {
+          setData(products.products);
+          setFiltering(products.products);
+          setLoading(false);
+        }, 500);
       }
 
       return () => {
@@ -138,7 +135,7 @@ const Products = () => {
                     height={400}
                   />
                   <div className="card-body">
-                    <p className="card-title h5">{product.title}</p>
+                    <h5 className="card-title">{product.title}</h5>
                     <p className="card-text">
                       {product.description.substring(0, 90)}...
                     </p>

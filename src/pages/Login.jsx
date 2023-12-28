@@ -9,17 +9,22 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const foundUser = await axios.post('http://localhost:3001/authentication/sign-in', {
-      username: email,
-      password,
-    }).catch((error) => {
-      console.log(error);
-      alert("Email or password incorrect. Please try again.");
-    })
-    localStorage.setItem('token', foundUser.data.accessToken);
+    const foundUser = await axios
+      .post("https://mudiem-be.onrender.com/authentication/sign-in", {
+        username: email,
+        password,
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Email or password incorrect. Please try again.");
+      });
+    localStorage.setItem("token", foundUser.data.accessToken);
     localStorage.setItem(
       "user",
-      JSON.stringify({ email: foundUser.data.username, name: foundUser.data.fullName })
+      JSON.stringify({
+        email: foundUser.data.username,
+        name: foundUser.data.fullName,
+      })
     );
     window.location.href = "/";
     return;

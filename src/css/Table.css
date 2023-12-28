@@ -1,0 +1,54 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.history {
+  margin: 10px;
+}
+
+.history h6 {
+  margin-bottom: 5px;
+}
+
+.history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history th,
+.history td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.history th {
+  background-color: #f2f2f2;
+}

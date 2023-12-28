@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import { Footer, Navbar } from "../components";
 import products from "../data/products.json";
 import { formatPrice } from "../utils";
-import { PayPalButton } from 'react-paypal-button-v2';
+import { PayPalButton } from "react-paypal-button-v2";
 
 const Checkout = () => {
   const stateCountry = "";
-// AaxhuShkzo-wR-cm9BvbN3LU_FdtH1casOpqmWIaUxtKjgrR8l_CvshWHm5cRyyfQqfzdtiN5tkUotwg
+  // AaxhuShkzo-wR-cm9BvbN3LU_FdtH1casOpqmWIaUxtKjgrR8l_CvshWHm5cRyyfQqfzdtiN5tkUotwg
   const state = useSelector((state) => state.handleCart);
   const [productList, setProductList] = useState([]);
   useEffect(() => {
@@ -47,36 +47,36 @@ const Checkout = () => {
 
   const handleCheckout = async (name) => {
     // e.preventDefault();
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     const listProduct = [];
     state.map((prod) => {
-      const foundProduct = products.products.filter(
-        (p) => p.id === prod.id
-      )[0];
-      listProduct.push({...foundProduct, quantity: prod.qty});
+      const foundProduct = products.products.filter((p) => p.id === prod.id)[0];
+      listProduct.push({ ...foundProduct, quantity: prod.qty });
       return 0;
     });
     const data = {
-      firstName: document.getElementById('firstName').value,
-      lastName: document.getElementById('lastName').value,
-      email: document.getElementById('email').value,
-      address: document.getElementById('address').value,
-      address2: document.getElementById('address2').value,
-      country: document.getElementById('country').value,
+      firstName: document.getElementById("firstName").value,
+      lastName: document.getElementById("lastName").value,
+      email: document.getElementById("email").value,
+      address: document.getElementById("address").value,
+      address2: document.getElementById("address2").value,
+      country: document.getElementById("country").value,
       state: stateCountry,
-      zip: document.getElementById('zip').value,
-      listProduct
-    }
-    await axios.post('http://localhost:3001/bill/create', data, {
+      nameCard: "Nghi123456",
+      creditCardNum: "123456789",
+      zip: document.getElementById("zip").value,
+      listProduct,
+    };
+    await axios.post("https://mudiem-be.onrender.com/bill/create", data, {
       headers: {
         Authorization: `Bearer ${token}`,
-      }
+      },
     });
     localStorage.setItem("cart", "");
     window.location.href = "/";
-    
+
     alert("Transaction completed by " + name);
-  }
+  };
 
   const ShowCheckout = () => {
     let subtotal = 0;
@@ -333,9 +333,9 @@ const Checkout = () => {
                     </button> */}
                     <PayPalButton
                       style={{
-                        disableMaxWidth: true
+                        disableMaxWidth: true,
                       }}
-                      amount={Math.ceil((subtotal + shipping)/24360)}
+                      amount={Math.ceil((subtotal + shipping) / 24360)}
                       // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
                       onSuccess={(details, data) => {
                         handleCheckout(details.payer.name.given_name);
@@ -344,8 +344,8 @@ const Checkout = () => {
                         return fetch("/paypal-transaction-complete", {
                           method: "post",
                           body: JSON.stringify({
-                            orderID: data.orderID
-                          })
+                            orderID: data.orderID,
+                          }),
                         });
                       }}
                     />

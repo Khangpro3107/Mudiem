@@ -2,212 +2,333 @@
   "products": [
     {
       "id": "1",
-      "title": "Men's white t-shirt",
-      "price": 215000,
-      "description": "A timeless essential that effortlessly combines style, comfort, and versatility for any occasion",
-      "rating": {
-        "rate": 3.7
-      },
-      "category": "men's clothing",
-      "image": "/assets/products/T-shirt.png"
-    },
-    {
-      "id": "2",
-      "title": "Jeans basic Slim DABJ004",
-      "price": 849000,
-      "description": "A stylish and versatile pair of jeans with a slim fit design, combining comfort and contemporary fashion effortlessly. Elevate your everyday style with this wardrobe essential.",
-      "rating": {
-        "rate": 4.5
-      },
-      "category": "men's clothing",
-      "image": "/assets/products/Jeans.png"
-    },
-    {
-      "id": "3",
-      "title": "Sun protection windbreaker",
-      "price": 315000,
-      "description": "The shirt is designed to be youthful and dynamic, with bright white color, especially good at protecting against UV rays.",
-      "rating": {
-        "rate": 5.0
-      },
-      "category": "men's clothing",
-      "image": "/assets/products/Ao-gio.png"
-    },
-    {
-      "id": "4",
-      "title": "CANIFA women's cardigan",
-      "price": 399000,
-      "description": "CANIFA women's cardigan is designed with a long-sleeved, short-medium V-neck",
-      "rating": {
-        "rate": 4.1
-      },
-      "category": "women's clothing",
-      "image": "/assets/products/Ao-cardigan.png"
-    },
-    {
-      "id": "5",
-      "title": "The Basic 3-layer skirt",
-      "price": 490000,
-      "description": "The Basic skirt is designed to be near the ankle length, has a 3-layered skirt, and has a slightly flared, feminine shape",
-      "rating": {
-        "rate": 3.2
-      },
-      "category": "women's clothing",
-      "image": "/assets/products/Chan-vay.png"
-    },
-    {
-      "id": "6",
-      "title": "Women's hoodie",
-      "price": 499000,
-      "description": "Loose fleece pullover with drawstring hood, interior lining, kangaroo pockets and ribbed cuffs and hem.",
-      "rating": {
-        "rate": 3.8
-      },
-      "category": "women's clothing",
-      "image": "/assets/products/hoodle-nu.png"
-    },
-    {
-      "id": "7",
-      "title": "ZUMBA Crossbody Bag",
-      "price": 280000,
-      "description": "Wearing a sporty style suitable for active young people. Suitable for daily wear or participating in outdoor activities.",
-      "rating": {
-        "rate": 4.8
-      },
-      "category": "accessories",
-      "image": "/assets/products/Tui-deo-cheo.png"
-    },
-    {
-      "id": "8",
-      "title": "Adidas caps",
-      "price": 450000,
-      "description": "There are adjustable straps at the back for a comfortable fit. The curved brim is always ready for you to put on your head.",
-      "rating": {
-        "rate": 4.4
-      },
-      "category": "accessories",
-      "image": "/assets/products/non-luoi-trai.png"
-    },
-    {
-      "id": "9",
-      "title": "UV-Proof Polarized Sunglasses",
-      "price": 459000,
-      "description": "The ultimate blend of style and protection. These sunglasses not only shield your eyes from harmful UV rays but also reduce glare for enhanced visual clarity. Stay fashionable and safeguarded with this essential accessory.",
-      "rating": {
-        "rate": 4.2
-      },
-      "category": "accessories",
-      "image": "/assets/products/kinh-ram.png"
-    },
-    {
-      "id": "10",
-      "title": "LA ROCHE-POSAY Sunscreen",
-      "price": 100000,
-      "description": "This dermatologist-tested formula provides broad-spectrum protection while being gentle on the skin. Stay protected and confident under the sun with LA ROCHE-POSAY Sunscreen.",
-      "rating": {
-        "rate": 3.9
-      },
-      "category": "accessories",
-      "image": "/assets/products/kem-chong-nang.png"
-    },
-    {
-      "id": "11",
-      "title": "LOCK&LOCK neck pillow",
-      "price": 310000,
-      "description": "Its ergonomic design ensures a relaxing experience, whether on planes, trains, or road trips. Rest easy with LOCK&LOCK Neck Pillow.",
-      "rating": {
-        "rate": 3.1
-      },
-      "category": "accessories",
-      "image": "/assets/products/goi-ke-dau.png"
-    },
-    {
-      "id": "12",
-      "title": "Black suitcase",
-      "price": 1120000,
-      "description": "With its durable construction, ample storage space, and smooth-rolling wheels, this suitcase is perfect for any adventure. Stay organized and travel in style with our Black Suitcase.",
-      "rating": {
-        "rate": 3.4
-      },
-      "category": "accessories",
-      "image": "/assets/products/black-suitcase.png"
-    },
-    {
-      "id": "13",
-      "title": "Mens Casual Premium Slim Fit T-Shirt",
-      "price": 459000,
-      "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans.",
-      "rating": {
-        "rate": 3.8
-      },
-      "category": "men's clothing",
-      "image": "/assets/products/casual-t-shirt.jpg"
-    },
-    {
-      "id": "14",
-      "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
-      "price": 670000,
-      "description": "100% POLYURETHANE (shell) 100% POLYESTER (lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
-      "rating": {
-        "rate": 4.9
-      },
-      "category": "women's clothing",
-      "image": "/assets/products/moto-jacket.jpg"
-    },
-    {
-      "id": "15",
-      "title": "DANVOUY Womens T-Shirt Casual Cotton Short",
-      "price": 210000,
-      "description": "5% Cotton, 5% Spandex. Features: Casual, Short Sleeve, Letter Print, V-Neck, Fashion Tees. The fabric is soft and has some stretch.",
-      "rating": {
-        "rate": 4.6
-      },
-      "category": "women's clothing",
-      "image": "/assets/products/casual-women.jpg"
-    },
-    {
-      "id": "16",
-      "title": "Women sunglasses",
-      "price": 230000,
-      "description": "Choose from a variety of shapes, colors, and lens options to find the perfect pair that complements your personal style and offers UV protection. Step out in confidence and style with our Women Sunglasses.",
-      "rating": {
-        "rate": 4.3
-      },
-      "category": "accessories",
-      "image": "/assets/products/women-sunglasses.png"
-    },
-    {
-      "id": "17",
-      "title": "Men sport shoes",
-      "price": 790000,
-      "description": "Designed with advanced cushioning and breathability, these shoes provide optimal stability and responsiveness for your runs. Whether you're hitting the pavement or tackling the trails, our Men's Sport Shoes will elevate your running experience.",
-      "rating": {
-        "rate": 4.4
-      },
-      "category": "footwear",
-      "image": "/assets/products/men-sport-shoes.jpg"
-    },
-    {
-      "id": "18",
-      "title": "Women sport shoes",
-      "price": 790000,
-      "description": "Designed with comfort and performance in mind, these shoes offer excellent support, flexibility, and durability for all your athletic activities. Whether you're hitting the gym, going for a run, or practicing your favorite sport, our Women's Sport Shoes will keep you comfortable and confident.",
-      "rating": {
-        "rate": 4.6
-      },
-      "category": "footwear",
-      "image": "/assets/products/women-sport-shoes.jpg"
-    },
-    {
-      "id": "19",
-      "title": "Beach slippers",
-      "price": 130000,
+      "title": "Beach Slippers",
+      "price": 70000,
       "description": "These slippers combine style and comfort, with a lightweight design and durable materials that are perfect for sandy beaches and water activities. Slip them on and enjoy your time by the shore with our Beach Slippers.",
       "rating": {
         "rate": 3.0
       },
-      "category": "footwear",
-      "image": "/assets/products/beach-slipper.jpg"
+      "category": "beach",
+      "image": "https://i.ibb.co/JWLb9Tp/beach-slipper.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Men's Beach Shorts",
+      "price": 130000,
+      "description": "Stay cool and stylish at the beach with our Men's Beach Shorts. Designed for comfort and durability, these shorts are a must-have for your summer adventures.",
+      "rating": {
+        "rate": 3.7
+      },
+      "category": "beach",
+      "image": "https://i.ibb.co/GvHjshD/image-2023-12-27-225900732.png"
+    },
+    {
+      "id": "3",
+      "title": "Beach Sun Hat",
+      "price": 87000,
+      "description": "Shield yourself from the sun in style with our Beach Sun Hat. Featuring UPF protection and a wide brim, it's the perfect accessory for your sunny beach days.",
+      "rating": {
+        "rate": 3.9
+      },
+      "category": "beach",
+      "image": "https://i.ibb.co/5jZf6X5/image-2023-12-27-230253683.png"
+    },
+    {
+      "id": "4",
+      "title": "Beach Mat",
+      "price": 123000,
+      "description": "Lounge in comfort on our versatile Beach Mat. Made from durable materials, it provides a cozy and sand-free space for relaxation, picnics, and sun-soaked beach outings.",
+      "rating": {
+        "rate": 4.7
+      },
+      "category": "beach",
+      "image": "https://i.ibb.co/gFNb3tF/image-2023-12-27-230606530.png"
+    },
+    {
+      "id": "5",
+      "title": "Beach Sunglasses",
+      "price": 167000,
+      "description": "Protect your eyes in style with our Beach Sunglasses. Designed with UV400 lenses and trendy frames, these shades add a touch of cool to your beach look while keeping your eyes safe.",
+      "rating": {
+        "rate": 4.9
+      },
+      "category": "beach",
+      "image": "https://i.ibb.co/LYFRYBk/image-2023-12-27-232710743.png"
+    },
+    {
+      "id": "6",
+      "title": "Beach Bag",
+      "price": 98000,
+      "description": "Tote your essentials in our spacious Beach Bag. With multiple compartments, sturdy handles, and a water-resistant design, it's the perfect companion for your beach adventures, offering both style and functionality.",
+      "rating": {
+        "rate": 4.8
+      },
+      "category": "beach",
+      "image": "https://i.ibb.co/2kS7skP/image-2023-12-27-232851285.png"
+    },
+    {
+      "id": "7",
+      "title": "Donut Beach Float",
+      "price": 69000,
+      "description": "Indulge in sweet relaxation on our Donut Beach Float. With its mouthwatering design, durable construction, and comfortable seating, it's the perfect companion for lazy days by the water.",
+      "rating": {
+        "rate": 4.5
+      },
+      "category": "beach",
+      "image": "https://i.ibb.co/vHjY2Zf/image-2023-12-27-233111260.png"
+    },
+    {
+      "id": "8",
+      "title": "Full-Body Wetsuit",
+      "price": 560000,
+      "description": "Dive into the water with confidence in our Full-Body Wetsuit. Designed for maximum flexibility and insulation, it provides superior comfort and protection for all your aquatic adventures.",
+      "rating": {
+        "rate": 4.6
+      },
+      "category": "beach",
+      "image": "https://i.ibb.co/k5b1hBc/image-2023-12-27-233501598.png"
+    },
+    {
+      "id": "9",
+      "title": "Men's Hiking Pants",
+      "price": 230000,
+      "description": "Conquer the trails with confidence in our Men's Hiking Pants. Designed for durability and flexibility, these pants offer comfort and functionality for your outdoor adventures.",
+      "rating": {
+        "rate": 4.5
+      },
+      "category": "hiking",
+      "image": "https://i.ibb.co/R7cSXzX/image-2023-12-28-072006519.png"
+    },
+    {
+      "id": "10",
+      "title": "Women's Hiking Pants",
+      "price": 232000,
+      "description": "Experience the perfect blend of style and functionality with our Women's Hiking Pants. Designed for rugged outdoor excursions, these pants offer comfort, durability, and a flattering fit.",
+      "rating": {
+        "rate": 4.3
+      },
+      "category": "hiking",
+      "image": "https://i.ibb.co/nfF0y1y/image-2023-12-28-072214513.png"
+    },
+    {
+      "id": "11",
+      "title": "Heavy Hiking Backpack",
+      "price": 782000,
+      "description": "Carry your essentials with ease on demanding hikes with our Heavy Hiking Backpack. Built for durability and comfort, it offers ample storage and adjustable straps for a customized fit.",
+      "rating": {
+        "rate": 4.2
+      },
+      "category": "hiking",
+      "image": "https://i.ibb.co/0yb8GgD/image-2023-12-28-072403155.png"
+    },
+    {
+      "id": "12",
+      "title": "Light Hiking Backpack",
+      "price": 675000,
+      "description": "Embark on your hiking adventures with our Light Hiking Backpack. Designed for comfort and versatility, this backpack offers a lightweight and compact solution for carrying your essentials on the trail.",
+      "rating": {
+        "rate": 4.9
+      },
+      "category": "hiking",
+      "image": "https://i.ibb.co/9sy4Zcy/image-2023-12-28-072450748.png"
+    },
+    {
+      "id": "13",
+      "title": "Women's Hiking Shoes",
+      "price": 1375000,
+      "description": "Conquer the trails in style with our Women's Hiking Shoes. Designed for comfort and durability, these shoes provide excellent traction and support for your outdoor explorations.",
+      "rating": {
+        "rate": 4.8
+      },
+      "category": "hiking",
+      "image": "https://i.ibb.co/Sm2Yknh/image-2023-12-28-072924840.png"
+    },
+    {
+      "id": "14",
+      "title": "Men's Hiking Shoes",
+      "price": 1170000,
+      "description": "Trek with confidence in our Men's Hiking Shoes. Engineered for rugged terrains, these shoes offer superior grip, support, and comfort, ensuring an enjoyable hiking experience.",
+      "rating": {
+        "rate": 4.8
+      },
+      "category": "hiking",
+      "image": "https://i.ibb.co/QfWCrYd/image-2023-12-28-073048004.png"
+    },
+    {
+      "id": "15",
+      "title": "Hiking Hat",
+      "price": 179000,
+      "description": "Stay protected from the elements on your hikes with our Hiking Hat. Featuring UPF sun protection and breathable materials, it keeps you cool and shields you from the sun's rays.",
+      "rating": {
+        "rate": 3.2
+      },
+      "category": "hiking",
+      "image": "https://i.ibb.co/5k6Myws/image-2023-12-28-073208139.png"
+    },
+    {
+      "id": "16",
+      "title": "Men's Snow Coat",
+      "price": 829000,
+      "description": "Defy winter's chill in our Men's Snow Coat. With insulated warmth, waterproof protection, and a stylish design, it's the perfect companion for your snowy outdoor escapades.",
+      "rating": {
+        "rate": 3.7
+      },
+      "category": "cold",
+      "image": "https://i.ibb.co/yWjZwDR/image-2023-12-28-205903533.png"
+    },
+    {
+      "id": "17",
+      "title": "Snow Goggles",
+      "price": 620000,
+      "description": "Conquer the slopes with clarity and style wearing our Snow Goggles. Designed to provide maximum visibility and protect your eyes from snow glare, they're a must-have for winter adventures.",
+      "rating": {
+        "rate": 3.8
+      },
+      "category": "cold",
+      "image": "https://i.ibb.co/c3v4rk7/image-2023-12-28-210024131.png"
+    },
+    {
+      "id": "18",
+      "title": "Women's Snow Coat",
+      "price": 760000,
+      "description": "Embrace winter in style with our Women's Snow Coat. Combining fashion and functionality, this coat offers warmth, water-resistance, and a flattering fit for all your snowy adventures.",
+      "rating": {
+        "rate": 3.1
+      },
+      "category": "cold",
+      "image": "https://i.ibb.co/F4RcVML/image-2023-12-28-210137533.png"
+    },
+    {
+      "id": "19",
+      "title": "Winter Trooper Hat",
+      "price": 450000,
+      "description": "Stay warm and cozy in the winter cold with our Winter Trooper Hat. Featuring a faux fur lining and ear flaps, it provides ultimate protection and style during frosty weather.",
+      "rating": {
+        "rate": 5.0
+      },
+      "category": "cold",
+      "image": "https://i.ibb.co/2SBMQ6F/image-2023-12-28-210310913.png"
+    },
+    {
+      "id": "20",
+      "title": "Winter Leather Hat",
+      "price": 250000,
+      "description": "Elevate your winter style with our Leather Winter Hat. Crafted with genuine leather and lined for warmth, it offers a stylish and cozy accessory for chilly days.",
+      "rating": {
+        "rate": 5.0
+      },
+      "category": "cold",
+      "image": "https://i.ibb.co/XZF48t2/image-2023-12-28-210429757.png"
+    },
+    {
+      "id": "21",
+      "title": "Women's Winter Hat",
+      "price": 240000,
+      "description": "Stay stylish and warm this winter with our Women's Winter Hat. Designed with soft, insulating materials and trendy accents, it's the perfect accessory to complete your cold-weather ensemble.",
+      "rating": {
+        "rate": 4.0
+      },
+      "category": "cold",
+      "image": "https://i.ibb.co/NWqXFCv/image-2023-12-28-210604022.png"
+    },
+    {
+      "id": "22",
+      "title": "Ski Boots",
+      "price": 1080000,
+      "description": "Conquer the slopes with confidence in our Ski Boots. Designed for performance and comfort, these boots provide excellent control, support, and warmth for your skiing adventures.",
+      "rating": {
+        "rate": 4.2
+      },
+      "category": "cold",
+      "image": "https://i.ibb.co/G3XDMV5/image-2023-12-28-210740866.png"
+    },
+    {
+      "id": "23",
+      "title": "Portable Tent",
+      "price": 990000,
+      "description": "Experience ultimate convenience and shelter on-the-go with our Portable Tent. Easy to set up and lightweight, it offers comfortable and reliable protection for your outdoor adventures.",
+      "rating": {
+        "rate": 4.6
+      },
+      "category": "accessories",
+      "image": "https://i.ibb.co/LJXQKWC/image-2023-12-28-211543446.png"
+    },
+    {
+      "id": "24",
+      "title": "Lightweight Suicase",
+      "price": 1180000,
+      "description": "Travel with ease and efficiency using our Lightweight Suitcase. Designed for effortless maneuverability, it offers ample storage space while keeping your belongings secure during your journeys.",
+      "rating": {
+        "rate": 4.2
+      },
+      "category": "accessories",
+      "image": "https://i.ibb.co/D50rTxp/image-2023-12-28-211721881.png"
+    },
+    {
+      "id": "25",
+      "title": "Sleeping Bag",
+      "price": 680000,
+      "description": "Rest comfortably under the stars with our Sleeping Bag. Designed for optimal warmth and portability, it offers a cozy and insulated retreat for a restful night's sleep in the great outdoors.",
+      "rating": {
+        "rate": 4.1
+      },
+      "category": "accessories",
+      "image": "https://i.ibb.co/f2rRZ7F/image-2023-12-28-211851238.png"
+    },
+    {
+      "id": "26",
+      "title": "Portable Umbrella",
+      "price": 210000,
+      "description": "Stay prepared for unpredictable weather with our Portable Umbrella. Compact, lightweight, and reliable, it offers instant protection from rain or shine, wherever your travels take you.",
+      "rating": {
+        "rate": 4.3
+      },
+      "category": "accessories",
+      "image": "https://i.ibb.co/DG0Mt90/image-2023-12-28-212028917.png"
+    },
+    {
+      "id": "27",
+      "title": "High-power Binocular",
+      "price": 1200000,
+      "description": "Experience the world up close with our High-Power Binocular. Offering exceptional magnification and clarity, it's the perfect companion for bird-watching, outdoor adventures, and observing distant landscapes.",
+      "rating": {
+        "rate": 4.4
+      },
+      "category": "accessories",
+      "image": "https://i.ibb.co/kSnsMvY/image-2023-12-28-212202926.png"
+    },
+    {
+      "id": "28",
+      "title": "One Eye Binocular",
+      "price": 1070000,
+      "description": "Explore the wonders of the universe with our One Eye Telescope. Compact and powerful, it brings celestial objects closer, allowing you to embark on a captivating stargazing journey.",
+      "rating": {
+        "rate": 3.2
+      },
+      "category": "accessories",
+      "image": "https://i.ibb.co/HHGMBMM/image-2023-12-28-212341534.png"
+    },
+    {
+      "id": "29",
+      "title": "Shoulder Bag",
+      "price": 250000,
+      "description": "Carry your essentials in style and convenience with our Shoulder Bag. Designed for practicality and fashion, it offers ample storage and a comfortable fit for your everyday adventures.",
+      "rating": {
+        "rate": 3.7
+      },
+      "category": "accessories",
+      "image": "https://i.ibb.co/7QD8fMG/image-2023-12-28-212503982.png"
+    },
+    {
+      "id": "30",
+      "title": "Small Travel Bag",
+      "price": 360000,
+      "description": "Travel light and organized with our Small Travel Bag. Compact yet spacious, it's the perfect companion for short trips, offering functionality, style, and hassle-free mobility.",
+      "rating": {
+        "rate": 3.8
+      },
+      "category": "accessories",
+      "image": "https://i.ibb.co/dkFjGbG/image-2023-12-28-212619615.png"
     }
   ]
 }
