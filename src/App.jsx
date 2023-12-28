@@ -15,12 +15,13 @@ import {
   Register,
   Checkout,
   PageNotFound,
+  Bills,
 } from "./pages";
 
 function App() {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Provider store={store}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Products />} />
@@ -31,23 +32,12 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/bills" element={<Bills />} />
           <Route path="*" element={<PageNotFound />} />
           <Route path="/product/*" element={<PageNotFound />} />
-          {/* <Route path="/" element={<Home />}>
-            <Route path="product" element={<Products />} />
-            <Route path="product/:id" element={<Product />} />
-            <Route path="about" element={<AboutPage />} />
-            <Route path="contact" element={<ContactPage />} />
-            <Route path="cart" element={<Cart />} />
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-            <Route path="checkout" element={<Checkout />} />
-            <Route path="product/*" element={<PageNotFound />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Route> */}
         </Routes>
-      </BrowserRouter>
-    </Provider>
+      </Provider>
+    </BrowserRouter>
   );
 }
 

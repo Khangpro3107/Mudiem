@@ -1,7 +1,6 @@
-import { Link, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
-import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const state = useSelector((state) => state.handleCart);
@@ -14,6 +13,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("user");
+    localStorage.removeItem("token");
     localStorage.setItem("cart", JSON.stringify(state));
     window.location.href = "/";
   };
@@ -48,6 +48,15 @@ const Navbar = () => {
                 Products
               </NavLink>
             </li>
+            {user ? (
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/bills">
+                  Bills
+                </NavLink>
+              </li>
+            ) : (
+              <></>
+            )}
             <li className="nav-item">
               <NavLink className="nav-link" to="/about">
                 About

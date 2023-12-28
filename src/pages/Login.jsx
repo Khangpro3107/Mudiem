@@ -1,26 +1,28 @@
+import axios from "axios";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Footer, Navbar } from "../components";
-import { useState } from "react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    const foundUser = localStorage.getItem(email);
-    if (foundUser) {
-      const user = JSON.parse(foundUser);
-      if (user.password === password) {
-        localStorage.setItem(
-          "user",
-          JSON.stringify({ email: user.email, name: user.name })
-        );
-        window.location.href = "/";
-        return;
-      }
-    }
-    alert("Email or password incorrect. Please try again.");
+    const foundUser = await axios.post('http://localhost:3001/authentication/sign-in', {
+      username: email,
+      password,
+    }).catch((error) => {
+      console.log(error);
+      alert("Email or password incorrect. Please try again.");
+    })
+    localStorage.setItem('token', foundUser.data.accessToken);
+    localStorage.setItem(
+      "user",
+      JSON.stringify({ email: foundUser.data.username, name: foundUser.data.fullName })
+    );
+    window.location.href = "/";
+    return;
   };
 
   return (

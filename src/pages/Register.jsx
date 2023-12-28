@@ -1,6 +1,7 @@
-import { Footer, Navbar } from "../components";
-import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Footer, Navbar } from "../components";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -9,7 +10,7 @@ const Register = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     if (localStorage.getItem(email)) {
       setError(1);
@@ -17,14 +18,24 @@ const Register = () => {
       return;
     }
     setError(null);
-    localStorage.setItem(
-      email,
-      JSON.stringify({
-        name: name,
-        email: email,
-        password: password,
-      })
-    );
+    // localStorage.setItem(
+    //   email,
+    //   JSON.stringify({
+    //     name: name,
+    //     email: email,
+    //     password: password,
+    //   })
+    // );
+    await axios.post('http://localhost:3001/authentication/sign-up', {
+      fullName: name,
+      username: email,
+      password: password,
+    }, 
+    {
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    });
     navigate("/login");
     setName("");
     setEmail("");

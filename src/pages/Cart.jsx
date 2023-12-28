@@ -1,11 +1,10 @@
-import { Footer, Navbar } from "../components";
-import { useSelector, useDispatch } from "react-redux";
-import { addCart, delCart } from "../redux/action";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { formatPrice } from "../utils";
+import { Footer, Navbar } from "../components";
 import products from "../data/products.json";
-import { useEffect } from "react";
-import { useState } from "react";
+import { addCart, delCart } from "../redux/action";
+import { formatPrice } from "../utils";
 
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
@@ -167,13 +166,18 @@ const Cart = () => {
                       </li>
                     </ul>
 
-                    <Link
-                      to="/checkout"
-                      className="btn btn-primary-2 btn-lg btn-block"
-                    >
-                      <i className="fa fa-arrow-circle-right"></i> Go to
-                      checkout
-                    </Link>
+                    {
+                      localStorage.getItem('user') ?
+                      <Link
+                        to="/checkout"
+                        className="btn btn-primary-2 btn-lg btn-block"
+                      >
+                        <i className="fa fa-arrow-circle-right"></i> Go to
+                        checkout
+                      </Link>
+                      :
+                      <></>
+                    }
                   </div>
                 </div>
               </div>

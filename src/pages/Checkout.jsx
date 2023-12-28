@@ -1,12 +1,15 @@
-import { Footer, Navbar } from "../components";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { formatPrice } from "../utils";
-import { useState } from "react";
-import { useEffect } from "react";
+import { Footer, Navbar } from "../components";
 import products from "../data/products.json";
+import { formatPrice } from "../utils";
+import { PayPalButton } from 'react-paypal-button-v2';
 
 const Checkout = () => {
+  const stateCountry = "";
+// AaxhuShkzo-wR-cm9BvbN3LU_FdtH1casOpqmWIaUxtKjgrR8l_CvshWHm5cRyyfQqfzdtiN5tkUotwg
   const state = useSelector((state) => state.handleCart);
   const [productList, setProductList] = useState([]);
   useEffect(() => {
@@ -41,6 +44,39 @@ const Checkout = () => {
       </div>
     );
   };
+
+  const handleCheckout = async (name) => {
+    // e.preventDefault();
+    const token = localStorage.getItem('token');
+    const listProduct = [];
+    state.map((prod) => {
+      const foundProduct = products.products.filter(
+        (p) => p.id === prod.id
+      )[0];
+      listProduct.push({...foundProduct, quantity: prod.qty});
+      return 0;
+    });
+    const data = {
+      firstName: document.getElementById('firstName').value,
+      lastName: document.getElementById('lastName').value,
+      email: document.getElementById('email').value,
+      address: document.getElementById('address').value,
+      address2: document.getElementById('address2').value,
+      country: document.getElementById('country').value,
+      state: stateCountry,
+      zip: document.getElementById('zip').value,
+      listProduct
+    }
+    await axios.post('http://localhost:3001/bill/create', data, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      }
+    });
+    localStorage.setItem("cart", "");
+    window.location.href = "/";
+    
+    alert("Transaction completed by " + name);
+  }
 
   const ShowCheckout = () => {
     let subtotal = 0;
@@ -92,7 +128,7 @@ const Checkout = () => {
                   <h4 className="mb-0">Billing address</h4>
                 </div>
                 <div className="card-body">
-                  <form className="needs-validation" noValidate>
+                  <form className="needs-validation" onSubmit={handleCheckout}>
                     <div className="row g-3">
                       <div className="col-sm-6 my-1">
                         <label htmlFor="firstName" className="form-label">
@@ -179,14 +215,14 @@ const Checkout = () => {
                         <br />
                         <select className="form-select" id="country" required>
                           <option value="">Choose...</option>
-                          <option>India</option>
+                          <option value="Vietnam">Vietnam</option>
                         </select>
                         <div className="invalid-feedback">
                           Please select a valid country.
                         </div>
                       </div>
 
-                      <div className="col-md-4 my-1">
+                      {/* <div className="col-md-4 my-1">
                         <label htmlFor="state" className="form-label">
                           State
                         </label>
@@ -198,7 +234,7 @@ const Checkout = () => {
                         <div className="invalid-feedback">
                           Please provide a valid state.
                         </div>
-                      </div>
+                      </div> */}
 
                       <div className="col-md-3 my-1">
                         <label htmlFor="zip" className="form-label">
@@ -217,11 +253,11 @@ const Checkout = () => {
                       </div>
                     </div>
 
-                    <hr className="my-4" />
+                    {/* <hr className="my-4" /> */}
 
-                    <h4 className="mb-3">Payment</h4>
+                    {/* <h4 className="mb-3">Payment</h4> */}
 
-                    <div className="row gy-3">
+                    {/* <div className="row gy-3">
                       <div className="col-md-6">
                         <label htmlFor="cc-name" className="form-label">
                           Name on card
@@ -288,13 +324,31 @@ const Checkout = () => {
                           Security code required
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                     <hr className="my-4" />
 
-                    <button className="w-100 btn btn-primary " type="submit">
+                    {/* <button className="w-100 btn btn-primary " type="submit">
                       Continue to checkout
-                    </button>
+                    </button> */}
+                    <PayPalButton
+                      style={{
+                        disableMaxWidth: true
+                      }}
+                      amount={Math.ceil((subtotal + shipping)/24360)}
+                      // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+                      onSuccess={(details, data) => {
+                        handleCheckout(details.payer.name.given_name);
+
+                        // OPTIONAL: Call your server to save the transaction
+                        return fetch("/paypal-transaction-complete", {
+                          method: "post",
+                          body: JSON.stringify({
+                            orderID: data.orderID
+                          })
+                        });
+                      }}
+                    />
                   </form>
                 </div>
               </div>
